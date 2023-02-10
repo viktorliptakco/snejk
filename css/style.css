@@ -1,0 +1,132 @@
+body {
+  background: rgb(51, 51, 51);
+  text-align: center;
+  margin: 0 auto;
+}
+
+canvas {
+  border: 0.5em solid rgb(21, 21, 21);
+  border-radius: 0.3em;
+  height: 80vh;
+}
+
+h1 {
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-size: clamp(1.5rem, 8vw, 2.5rem);
+  color: pink;
+  margin: 1em auto 0 auto;
+}
+
+@media (min-width: 1200px) {
+  .up, .down, .left, .right {
+    display: none;
+  }
+}
+@media (max-width: 1199px) {
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+  }
+  .game {
+    grid-column: 2/3;
+    grid-row: 1/5;
+  }
+  .up {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .down {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .left {
+    grid-column: 3/4;
+    grid-row: 2/4;
+    align-self: center;
+  }
+  .right {
+    grid-column: 3/4;
+    grid-row: 2/4;
+    align-self: center;
+  }
+  .up, .down, .game {
+    align-self: center;
+  }
+  .btn {
+    font-size: clamp(1.5rem, 8vw, 2.8rem);
+    color: pink;
+    padding: 0.4em;
+    background-color: rgb(21, 21, 21);
+    border: none;
+    border-radius: 0.4em;
+  }
+  .btn:active {
+    background-color: pink;
+    color: rgb(21, 21, 21);
+  }
+}
+@media screen and (orientation: portrait) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 5fr 1fr 1.2fr 1fr;
+  }
+  canvas {
+    max-width: 90%;
+    height: auto;
+  }
+  .game {
+    grid-column: 1/6;
+    grid-row: 1/2;
+  }
+  .up {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+  .down {
+    grid-column: 3/4;
+    grid-row: 4/5;
+  }
+  .left {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    justify-self: center;
+    align-self: center;
+  }
+  .right {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    justify-self: center;
+    align-self: center;
+  }
+  .btn {
+    font-size: 2.2em;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 1199px) {
+  main {
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+  }
+  h1 {
+    margin-top: 0;
+  }
+  .btn {
+    font-size: 2.5em;
+  }
+  .left {
+    grid-column: 3/4;
+  }
+  .right {
+    grid-column: 4/5;
+  }
+  /*.left {
+      position: relative;
+      left: -2.5em;
+  }
+
+  .right {
+      position: relative;
+      left: 6.5em;
+      max-width: 40%;
+  }*/
+}/*# sourceMappingURL=style.css.map */
